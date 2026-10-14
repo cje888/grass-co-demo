@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Grass Company | Instant Lawns and Lawn Care, Durban</title>
+<meta name="description" content="Instant lawns, lawn care and rejuvenation across Durban and KZN. Tell us what you need in under a minute and send it on WhatsApp.">
+<meta property="og:title" content="The Grass Company | The grass really is greener with us">
+<meta property="og:description" content="Tell us about your lawn in under a minute and send it straight to us on WhatsApp.">
+<meta name="theme-color" content="#ffffff">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --deep:#3d6b0e; --forest:#4d8411; --leaf:#599900; --lime:#91c745; --sun:#f6c445; --soil:#634730;
+    --cream:#ffffff; --paper:#f7f8f3; --ink:#3b2a1c; --muted:#6f6052; --line:#e6e1d4; --wa:#1fa855; --red:#d7372f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font:16px/1.6 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  h1,h2,h3,.serif{font-family:Fraunces,Georgia,serif}
+  svg{flex:none}
+  button{font:inherit}
+
+  header{position:sticky;top:0;z-index:30;border-bottom:1px solid var(--line);background:rgba(255,255,255,.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:10px;color:var(--soil);text-decoration:none}
+  .brand img{height:46px;width:auto}
+  .brand .wm{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:1.2rem;letter-spacing:-.01em}
+  .brand .wm em{font-style:italic;color:var(--leaf)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:700;text-decoration:none;border:0;border-radius:14px;padding:14px 22px;cursor:pointer;transition:transform .15s,box-shadow .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-wa{background:var(--wa);color:#fff;box-shadow:0 10px 26px rgba(31,168,85,.35)}
+  .btn-lime{background:var(--leaf);color:#fff;box-shadow:0 10px 26px rgba(89,153,0,.3)}
+  .btn-ghost{background:#fff;color:var(--soil);border:1px solid var(--line)}
+  .btn-sm{padding:10px 14px;border-radius:12px;font-size:.92rem}
+  @media(max-width:520px){header .btn-sm span{display:none}}
+
+  /* HERO */
+  .hero{position:relative;color:var(--soil);overflow:hidden;background:radial-gradient(ellipse at 50% 0%,#f4f8ea,#ffffff 60%);padding:28px 0 0}
+  .hero .biglogo{display:block;margin:0 auto 12px;max-width:min(300px,70%);height:auto}
+  .hero .wrap{position:relative;z-index:2;text-align:center}
+  .chip{display:inline-flex;align-items:center;gap:8px;background:#f1f8e4;border:1px solid #cfe3a8;color:var(--leaf);font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:7px 14px;border-radius:999px}
+  .hero h1{font-weight:800;font-size:clamp(2.2rem,7vw,4.4rem);line-height:.98;letter-spacing:-.03em;margin:14px auto 12px;max-width:14ch}
+  .hero h1{color:var(--soil)}
+  .hero h1 em{font-style:italic;font-weight:600;color:var(--leaf)}
+  .hero p.lead{color:var(--muted);font-size:1.15rem;max-width:36em;margin:0 auto}
+  .hero .cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:20px}
+  .stats{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin-top:22px;color:var(--muted);font-size:.9rem}
+  .stats b{display:block;font-family:Fraunces,Georgia,serif;font-size:1.5rem;color:var(--leaf);line-height:1.1}
+  .sun{position:absolute;right:6%;top:20px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,#ffe58a,var(--sun) 55%,rgba(246,196,69,0) 72%);filter:blur(2px);opacity:.75;animation:pulse 6s ease-in-out infinite}
+  @media(max-width:700px){.sun{width:80px;height:80px;top:8px;right:4%}}
+  @keyframes pulse{50%{transform:scale(1.08);opacity:.9}}
+  .meadow{position:relative;height:90px;margin-top:18px}
+  .meadow svg#meadow{position:absolute;bottom:0;left:0;width:100%;height:100%}
+  .blade{transform-origin:bottom center;animation:sway 3.6s ease-in-out infinite alternate}
+  @keyframes sway{from{transform:skewX(-4deg)}to{transform:skewX(5deg)}}
+  .meadow .bug{position:absolute;z-index:3;width:30px;height:30px;bottom:96px;left:-40px;animation:crawl 22s linear infinite}
+  @keyframes crawl{0%{left:-40px;transform:translateY(0) rotate(8deg)}25%{transform:translateY(-14px) rotate(-6deg)}50%{transform:translateY(0) rotate(8deg)}75%{transform:translateY(-10px) rotate(-6deg)}100%{left:calc(100% + 40px);transform:translateY(0) rotate(8deg)}}
+
+  section.block{padding:52px 0}
+  @media(max-width:600px){section.block{padding:40px 0}}
+  section.paper{background:var(--paper)}
+  .kicker{color:var(--leaf);font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase}
+  h2.big{font-weight:800;font-size:clamp(1.6rem,4.4vw,2.6rem);line-height:1.05;letter-spacing:-.025em;margin:10px 0 12px}
+  h2.big em{font-style:italic;font-weight:600;color:var(--leaf)}
+  .intro{color:var(--muted);max-width:42em;font-size:1.05rem}
+  .center{text-align:center}.center .intro{margin:0 auto}
+
+  /* QUOTE BUILDER */
+  .builder{margin:26px auto 0;max-width:860px;background:var(--paper);border-radius:28px;border:1px solid var(--line);box-shadow:0 40px 90px rgba(15,59,35,.16);overflow:hidden}
+  .progress{display:flex;background:var(--leaf);padding:16px 20px;gap:8px;align-items:center}
+  .progress span{flex:1;height:6px;border-radius:99px;background:rgba(255,255,255,.15);overflow:hidden;position:relative}
+  .progress span i{position:absolute;inset:0;width:0;background:linear-gradient(90deg,var(--lime),#d8f08a);transition:width .45s ease}
+  .progress span.done i,.progress span.on i{width:100%}
+  .progress small{color:#b7cdbb;font-weight:600;font-size:.82rem;margin-left:6px;white-space:nowrap}
+  .stepbox{padding:24px;min-height:0}
+  @media(max-width:560px){.stepbox{padding:22px 18px}}
+  .step{display:none;animation:fade .35s ease}
+  .step.on{display:block}
+  @keyframes fade{from{opacity:0;transform:translateX(12px)}to{opacity:1;transform:none}}
+  .step h3{font-size:1.5rem;letter-spacing:-.01em;margin-bottom:4px}
+  .step .hint{color:var(--muted);margin-bottom:20px}
+  .grid{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+  @media(min-width:720px){.grid.g4{grid-template-columns:repeat(4,1fr)}.grid.g3{grid-template-columns:repeat(3,1fr)}}
+  .tile{position:relative;display:flex;flex-direction:column;gap:6px;text-align:left;padding:12px;border-radius:18px;border:2px solid var(--line);background:#fff;cursor:pointer;transition:border-color .15s,transform .15s,box-shadow .15s}
+  .tile:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(15,59,35,.1)}
+  .tile .ic{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:#eaf4dc;color:var(--forest)}
+  .tile b{font-size:.98rem;line-height:1.25}
+  .tile small{color:var(--muted);font-size:.8rem;line-height:1.3}
+  @media(max-width:600px){.tile small{display:none}.tile .ic{width:36px;height:36px}.tile b{font-size:.9rem}}
+  .tile .tick{position:absolute;top:10px;right:10px;width:24px;height:24px;border-radius:50%;background:var(--leaf);color:#fff;display:none;place-items:center}
+  .tile.sel{border-color:var(--leaf);background:#f3f9ea;box-shadow:0 0 0 4px rgba(47,138,63,.12)}
+  .tile.sel .tick{display:grid}
+  .tile.rec{border-color:var(--sun)}
+  .tile .badge{position:absolute;top:-10px;left:14px;background:var(--sun);color:#3c2b05;font-size:.68rem;font-weight:800;letter-spacing:.08em;padding:3px 8px;border-radius:999px;display:none}
+  .tile.rec .badge{display:block}
+  .swatch{height:46px;border-radius:12px;margin-bottom:2px;background-size:cover;position:relative;overflow:hidden}
+  .swatch::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(100deg,rgba(255,255,255,.14) 0 2px,transparent 2px var(--g,6px))}
+  .light{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:600;color:var(--soil)}
+
+  .sunpick{display:flex;flex-wrap:wrap;gap:10px;margin:-4px 0 18px}
+  .sunpick span{color:var(--muted);font-size:.9rem;align-self:center;margin-right:4px}
+  .pill{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;border:2px solid var(--line);background:#fff;cursor:pointer;font-weight:600;font-size:.9rem}
+  .pill.sel{border-color:var(--sun);background:#fff7dc}
+
+  .area{display:grid;gap:22px}
+  @media(min-width:760px){.area{grid-template-columns:1.1fr .9fr;align-items:center}}
+  .tabs{display:inline-flex;background:#eef2e6;border-radius:12px;padding:4px;margin-bottom:16px}
+  .tabs button{border:0;background:transparent;padding:9px 14px;border-radius:9px;font-weight:600;color:var(--muted);cursor:pointer}
+  .tabs button.on{background:#fff;color:var(--ink);box-shadow:0 2px 6px rgba(0,0,0,.08)}
+  label.f{display:block;font-size:.84rem;font-weight:600;margin-bottom:6px}
+  input.t,select.t{width:100%;font:inherit;font-size:16px;padding:13px 14px;border-radius:12px;border:1px solid var(--line);background:#fbfaf4;color:var(--ink)}
+  input.t:focus,select.t:focus{outline:none;border-color:var(--leaf);background:#fff;box-shadow:0 0 0 4px rgba(47,138,63,.14)}
+  .two{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+  input[type=range]{width:100%;accent-color:var(--leaf);height:28px}
+  .lawnviz{position:relative;aspect-ratio:16/9;padding-bottom:70px;border-radius:22px;background:linear-gradient(180deg,#cfe7b6,#b9db98);overflow:hidden;border:1px solid #cfe0bd;display:grid;place-items:center}
+  .lawnviz .plot{position:relative;background:repeating-linear-gradient(90deg,#4f9a3a 0 14px,#5aa843 14px 28px);border-radius:10px;box-shadow:0 10px 24px rgba(15,59,35,.25),inset 0 0 0 3px rgba(255,255,255,.25);transition:width .35s ease,height .35s ease}
+  .lawnviz .num{position:absolute;inset:auto 0 14px 0;text-align:center}
+  .lawnviz .num b{font-family:Fraunces,Georgia,serif;font-size:2.4rem;color:var(--deep);line-height:1}
+  .lawnviz .num small{display:block;color:var(--forest);font-weight:600}
+
+  .chosen{display:inline-flex;align-items:center;gap:10px;background:#f1f8e4;border:1px solid #cfe3a8;color:var(--leaf);font-weight:700;font-size:.88rem;padding:6px 8px 6px 14px;border-radius:999px;margin:4px 0 10px}
+  .change{border:0;background:#fff;color:var(--soil);font-weight:600;font-size:.82rem;padding:5px 10px;border-radius:999px;cursor:pointer}
+  .navrow{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 30px;border-top:1px solid var(--line);background:#fbf9f1}
+  @media(max-width:560px){.navrow{padding:16px 18px}}
+  .back{border:0;background:none;color:var(--muted);font-weight:600;cursor:pointer;padding:10px 4px}
+  .back[hidden]{visibility:hidden;display:block}
+  .err{color:var(--red);font-size:.88rem;font-weight:600;min-height:1.3em}
+
+  .summary{background:#f1f8e4;color:var(--ink);border:1px solid #cfe3a8;border-radius:20px;padding:22px;font-size:.95rem}
+  .summary h4{font-family:Fraunces,Georgia,serif;font-size:1.2rem;color:var(--soil);margin-bottom:10px}
+  .summary ul{list-style:none;display:grid;gap:6px}
+  .summary li{display:flex;gap:10px}
+  .summary li b{color:var(--leaf);min-width:92px;font-weight:600}
+
+  /* GRASS TYPES */
+  .types{display:grid;gap:16px;margin-top:40px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+  .type{border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);transition:transform .2s,box-shadow .2s}
+  .type:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(15,59,35,.12)}
+  .type .swatch{height:110px;border-radius:0;margin:0}
+  .type div.t{padding:18px}
+  .type h3{font-size:1.25rem}
+  .type p{color:var(--muted);font-size:.92rem;margin-top:4px}
+
+  /* PROCESS */
+  .proc{display:grid;gap:16px;margin-top:40px;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));counter-reset:p}
+  .proc div{background:var(--cream);border-radius:20px;padding:22px 18px;position:relative}
+  .proc div::before{counter-increment:p;content:counter(p);display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--leaf);color:#fff;font-weight:800;margin-bottom:12px}
+  .proc b{display:block;margin-bottom:4px}
+  .proc span{color:var(--muted);font-size:.9rem}
+
+  /* GALLERY */
+  .gallery{display:grid;gap:10px;margin-top:22px;grid-auto-flow:column;grid-auto-columns:42%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+  .gallery figure{scroll-snap-align:start}
+  @media(min-width:760px){.gallery{grid-auto-flow:row;grid-template-columns:repeat(4,1fr);overflow:visible}}
+  .gallery figure{aspect-ratio:1;border-radius:18px;overflow:hidden;background:linear-gradient(135deg,#3f8f3a,#7cbf4c)}
+  .gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+  .gallery figure:hover img{transform:scale(1.06)}
+
+  /* SERVICES strip */
+  .svcs{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;justify-content:center}
+  .svcs span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 16px;font-weight:600;font-size:.92rem;display:inline-flex;gap:8px;align-items:center}
+  .svcs span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--lime)}
+
+  .contact{display:grid;gap:12px;margin-top:20px}
+  @media(min-width:760px){.contact{grid-template-columns:repeat(3,1fr)}}
+  .card{background:#fff;border:2px solid var(--lime);border-radius:20px;padding:16px 18px;box-shadow:0 10px 26px rgba(89,153,0,.08)}
+  .card p{color:var(--muted);font-size:.95rem;margin-bottom:16px}
+  .cbtns{display:flex;flex-wrap:wrap;gap:16px}
+  .cbtn{display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;color:var(--ink)!important;font-size:.8rem;font-weight:600}
+  .ico3d{position:relative;display:grid;place-items:center;width:54px;height:54px;border-radius:17px;color:#fff;background:var(--c);box-shadow:0 8px 0 -2px var(--d,#000),0 14px 20px rgba(0,0,0,.18),inset 0 2px 0 rgba(255,255,255,.45);transform:translateY(-3px);transition:transform .15s}
+  .ico3d::after{content:"";position:absolute;left:10%;right:10%;top:6%;height:42%;border-radius:14px 14px 40% 40%;background:linear-gradient(180deg,rgba(255,255,255,.45),rgba(255,255,255,0));pointer-events:none}
+  .cbtn:hover .ico3d{transform:translateY(-6px) rotate(-3deg)}
+  .cbtn:active .ico3d{transform:translateY(1px)}
+  .ico3d.has-img{background:transparent}
+  .ico3d.has-img img{width:100%;height:100%;border-radius:inherit;display:block}
+  .ico3d.has-img::after{opacity:.5}
+  .i-phone{--c:linear-gradient(145deg,#f7e2b0,#c99a45);--d:#8a6420;color:#3a2a0b}
+  .i-map{--c:linear-gradient(145deg,#91c745,#599900);--d:#3d6b0e}
+  .has-img{--d:#0d6b2f}
+  .mail .has-img{--d:#0b56a8}
+  .card small{color:var(--leaf);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem}
+  .card b{display:block;font-family:Fraunces,Georgia,serif;font-size:1.2rem;margin:2px 0 12px}
+  .card p{margin-bottom:12px!important}
+  .cbtns{gap:12px!important}
+  .cbtn .ico3d{width:46px;height:46px;border-radius:15px}
+  .cbtn{font-size:.74rem!important}
+  .card a:hover{color:var(--leaf)}
+
+  .wacard{display:flex;align-items:center;gap:16px;text-align:left;text-decoration:none;color:#fff;max-width:760px;margin:22px auto 0;padding:16px 18px;border-radius:24px;background:linear-gradient(120deg,#1fa855,#25d366);box-shadow:0 20px 44px rgba(31,168,85,.3);transition:transform .2s}
+  .wacard:hover{transform:translateY(-3px)}
+  .wai{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;background:rgba(255,255,255,.18);flex:none}
+  .wat{flex:1;display:flex;flex-direction:column}
+  .wat b{font-family:Fraunces,Georgia,serif;font-size:1.35rem}
+  .wat span{opacity:.92;font-size:.95rem}
+  .wago{font-weight:700;background:#fff;color:#128c4a;padding:10px 16px;border-radius:12px;white-space:nowrap}
+  @media(max-width:600px){.wacard{flex-wrap:wrap}.wago{width:100%;text-align:center}}
+  .demobar{background:#3b2a1c;color:#fff;text-align:center;font-size:.8rem;font-weight:600;padding:8px 14px}
+  footer{background:#3b2a1c;color:#d9cdbd;padding:30px 0 110px;font-size:.88rem}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+  @media(min-width:760px){footer{padding-bottom:30px}}
+  .mbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:40;display:none}
+  .mbar .btn{width:100%}
+  @media(max-width:759px){.mbar{display:block}}
+
+  .modal{position:fixed;inset:0;z-index:60;display:none;place-items:center;background:rgba(8,24,14,.6);padding:20px}
+  .modal.show{display:grid}
+  .modal .box{background:var(--paper);border-radius:22px;padding:24px;max-width:440px;width:100%}
+  .modal pre{white-space:pre-wrap;font:inherit;font-size:.92rem;background:#e9f6ec;border-radius:14px;padding:14px;margin:14px 0;max-height:50vh;overflow:auto}
+
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.blade,.bug,.sun{animation:none}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="demobar">Demo preview prepared for The Grass Company by CEVYQ Group. Buttons show where they will go.</div>
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <img src="https://www.thegrasscompany.co.za/wp-content/themes/grasscompany/images/grasscompany.png" alt="" onerror="this.remove()">
+      <span class="wm">The Grass <em>Company</em></span>
+    </a>
+    <a class="btn btn-wa btn-sm" href="#quote"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2z"/></svg><span>Get in touch</span></a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+    <div class="wrap">
+    <img class="biglogo" src="https://www.thegrasscompany.co.za/wp-content/themes/grasscompany/images/grasscompany.png" alt="The Grass Company" onerror="this.remove()">
+    <span class="chip">Instant lawns &middot; Durban and KZN</span>
+    <h1>The grass really is <em>greener</em> with us.</h1>
+    <p class="lead">New lawns, monthly care and tired lawns brought back to life.</p>
+    <div class="cta">
+      <a class="btn btn-lime" href="#quote">Get in touch
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-ghost" href="#contact">Contact us</a>
+    </div>
+    <div class="stats">
+      <div><b>20 yrs</b>grassing in KZN</div>
+      <div><b>8</b>lawn services</div>
+      <div><b>Family</b>run business</div>
+    </div>
+  </div>
+  <div class="meadow" aria-hidden="true">
+    <svg viewBox="0 0 1200 150" preserveAspectRatio="none" id="meadow"></svg>
+  </div>
+</section>
+
+<section class="block" id="quote">
+  <div class="wrap center">
+    <span class="kicker">Get in touch</span>
+    <h2 class="big">Tell us about your lawn. <em>We'll do the rest.</em></h2>
+    <p class="intro">Three quick taps, straight to our phone.</p>
+  </div>
+  <div class="wrap">
+    <form class="builder reveal" id="builder" novalidate>
+      <div class="progress" aria-hidden="true"><span><i></i></span><span><i></i></span><span><i></i></span><small id="stepLbl">Step 1 of 3</small></div>
+      <div class="stepbox">
+
+        <div class="step on" data-step="1">
+          <h3>What do you need?</h3>
+          <p class="hint">Tap one to continue.</p>
+          <div class="grid g4" id="svcGrid"></div>
+        </div>
+
+        <div class="step" data-step="2">
+          <h3>How big is the area?</h3>
+          <p class="chosen"><span id="chosen"></span> <button type="button" class="change" onclick="show(1)">Change</button></p>
+          <p class="hint">A rough size is fine. We'll measure properly on site.</p>
+          <div class="area">
+            <div>
+              <div class="tabs"><button type="button" class="on" data-mode="lw">Length &times; width</button><button type="button" data-mode="m2">I know the m&sup2;</button></div>
+              <div id="modeLW" class="two">
+                <div><label class="f" for="len">Length (m)</label><input class="t" id="len" type="number" inputmode="decimal" min="1" value="12"></div>
+                <div><label class="f" for="wid">Width (m)</label><input class="t" id="wid" type="number" inputmode="decimal" min="1" value="10"></div>
+              </div>
+              <div id="modeM2" hidden>
+                <label class="f" for="m2">Area: <span id="m2v">120</span> m&sup2;</label>
+                <input id="m2" type="range" min="10" max="1500" step="10" value="120">
+              </div>
+              <p class="hint" style="margin:14px 0 0;font-size:.9rem">Tip: a standard single garage is about 18 m&sup2;.</p>
+            </div>
+            <div class="lawnviz" aria-hidden="true"><div class="plot" id="plot"></div><div class="num"><b id="areaBig">120</b><small>square metres</small></div></div>
+          </div>
+        </div>
+
+        <div class="step" data-step="3">
+          <h3>Last bit: your details</h3>
+          <p class="hint">So we know who to reply to.</p>
+          <div class="area" style="align-items:start">
+            <div style="display:grid;gap:12px">
+              <div class="two">
+                <div><label class="f" for="nm">Your name</label><input class="t" id="nm" autocomplete="given-name" placeholder="e.g. Sarah"></div>
+                <div><label class="f" for="sb">Suburb</label><input class="t" id="sb" placeholder="e.g. Hillcrest"></div>
+              </div>
+              <div><label class="f" for="when">When would you like it done?</label>
+                <select class="t" id="when"><option>As soon as possible</option><option>Within a month</option><option>In 1 to 3 months</option><option>Just getting prices</option></select></div>
+              <div><label class="f" for="note">Anything else? (optional)</label><input class="t" id="note" placeholder="e.g. slope, old lawn to remove, access"></div>
+            </div>
+            <div class="summary" id="summary"></div>
+          </div>
+        </div>
+
+      </div>
+      <div class="navrow" style="display:none">
+        <button type="button" class="back" id="back" hidden>&larr; Back</button>
+        <span class="err" id="err" role="alert"></span>
+        <button type="button" class="btn btn-lime" id="next" style="visibility:hidden">Next &rarr;</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="block paper">
+  <div class="wrap center">
+    <span class="kicker">Latest work</span>
+    <h2 class="big">Lawns we're <em>proud of</em></h2>
+    <div class="gallery">
+      <figure class="reveal"><img loading="lazy" alt="" src="https://www.thegrasscompany.co.za/wp-content/gallery/latest-photos/109.jpg" onerror="this.remove()"></figure>
+      <figure class="reveal"><img loading="lazy" alt="" src="https://www.thegrasscompany.co.za/wp-content/gallery/latest-photos/111.jpg" onerror="this.remove()"></figure>
+      <figure class="reveal"><img loading="lazy" alt="" src="https://www.thegrasscompany.co.za/wp-content/gallery/latest-photos/113.jpg" onerror="this.remove()"></figure>
+      <figure class="reveal"><img loading="lazy" alt="" src="https://www.thegrasscompany.co.za/wp-content/gallery/maintenance/024.jpg" onerror="this.remove()"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="contact">
+  <div class="wrap center">
+    <span class="kicker">Talk to us</span>
+    <h2 class="big">Real people, <em>right here in KZN</em></h2>
+    <a class="wacard reveal" id="waCard" href="#">
+      <span class="wai"><svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2z"/></svg></span>
+      <span class="wat"><b>Chat to us on WhatsApp</b><span>Send a photo of your lawn and we'll tell you what it needs.</span></span>
+      <span class="wago">Start chat &rarr;</span>
+    </a>
+    <div class="contact" style="text-align:left">
+      <div class="card"><small>Quotes and technical</small><b>Donovan Payne</b>
+        <div class="cbtns"><a class="cbtn" href="tel:+27824662860"><span class="ico3d i-phone"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><span>Call me</span></a><a class="cbtn" href="#" data-wa="1" target="_blank" rel="noopener"><span class="ico3d has-img"><img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNjQgNjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDp1cmwoI2xpbmVhci1ncmFkaWVudCk7fS5jbHMtMntmaWxsOiNmZmY7fTwvc3R5bGU+PGxpbmVhckdyYWRpZW50IGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBpZD0ibGluZWFyLWdyYWRpZW50IiB4MT0iMzIiIHgyPSIzMiIgeTE9IjQiIHkyPSI2NC44MSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMWRmNDdjIi8+PHN0b3Agb2Zmc2V0PSIwLjMxIiBzdG9wLWNvbG9yPSIjMTJkZjYzIi8+PHN0b3Agb2Zmc2V0PSIwLjc1IiBzdG9wLWNvbG9yPSIjMDVjNDQzIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDBiYTM3Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHRpdGxlLz48ZyBkYXRhLW5hbWU9IjIzLXdoYXRzYXBwIiBpZD0iXzIzLXdoYXRzYXBwIj48cmVjdCBjbGFzcz0iY2xzLTEiIGhlaWdodD0iNjQiIHJ4PSIxMS4yIiByeT0iMTEuMiIgd2lkdGg9IjY0Ii8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMjcuNDIsMjEuMzhsMiw1LjQzYS43Ni43NiwwLDAsMS0uMS43NCwxMC4zMiwxMC4zMiwwLDAsMS0xLjQ4LDEuNzEuOC44LDAsMCwwLS4xNiwxLjA5QzI4LjkxLDMyLDMyLjEsMzYsMzYuMjUsMzcuNDNhLjc5Ljc5LDAsMCwwLC44OS0uMjlsMS42Ni0yLjIxYS44LjgsMCwwLDEsMS0uMjNMNDUsMzcuM2EuNzkuNzksMCwwLDEsLjQsMWMtLjU3LDEuNjItMi4zNiw1LjU3LTYuMTksNC45M0EyMC43OSwyMC43OSwwLDAsMSwyNi40LDM2Yy0zLjE0LTMuOTItOS4zNC0xNCwuMTktMTUuMTRBLjguOCwwLDAsMSwyNy40MiwyMS4zOFoiLz48cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik0zMy42LDU0LjhhMjQuMjEsMjQuMjEsMCwwLDEtMTEuOTQtMy4xM2wtMTIsMy4wOCw0LjQxLTkuOTFBMjIsMjIsMCwwLDEsMTAsMzJDMTAsMTkuNDMsMjAuNTksOS4yLDMzLjYsOS4yUzU3LjIsMTkuNDMsNTcuMiwzMiw0Ni42MSw1NC44LDMzLjYsNTQuOFpNMjIuMjksNDcuMzdsLjczLjQ1YTIwLjEzLDIwLjEzLDAsMCwwLDEwLjU4LDNjMTAuODEsMCwxOS42LTguNDMsMTkuNi0xOC44UzQ0LjQxLDEzLjIsMzMuNiwxMy4yLDE0LDIxLjYzLDE0LDMyYTE4LjEzLDE4LjEzLDAsMCwwLDQsMTEuMzRsLjc1Ljk1LTMuNjEsNi4xMloiLz48L2c+PC9zdmc+" alt=""></span><span>WhatsApp</span></a><a class="cbtn mail" href="mailto:donovan@thegrasscompany.co.za"><span class="ico3d has-img"><img src="data:image/webp;base64,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" alt=""></span><span>Email</span></a></div></div>
+      <div class="card"><small>Accounts and admin</small><b>Charmaine</b>
+        <div class="cbtns"><a class="cbtn" href="tel:+27317640707"><span class="ico3d i-phone"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><span>Call me</span></a><a class="cbtn mail" href="mailto:info@thegrasscompany.co.za"><span class="ico3d has-img"><img src="data:image/webp;base64,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" alt=""></span><span>Email</span></a></div></div>
+      <div class="card"><small>Find us</small><b>Gillitts</b><p>14 Neville Road<br>Gillitts, KZN 3610</p>
+        <div class="cbtns"><a class="cbtn" href="https://www.google.com/maps/search/?api=1&query=The%20Grass%20Company%2C%2014%20Neville%20Road%2C%20Gillitts%2C%20KZN%203610" target="_blank" rel="noopener"><span class="ico3d i-map"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg></span><span>Directions</span></a></div></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>&copy; The Grass Company &middot; Durban, KwaZulu Natal</span><span>Sample page by CEVYQ Group</span></div></footer>
+
+<div class="mbar"><a class="btn btn-wa" href="#quote"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2z"/></svg> Get in touch</a></div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mt">
+  <div class="box">
+    <h3 id="mt" class="serif">Demo mode</h3>
+    <p style="color:var(--muted)" id="mdesc">On the live page, this opens WhatsApp to The Grass Company with this message ready to send:</p>
+    <pre id="preview"></pre>
+    <button class="btn btn-lime" type="button" id="close" style="width:100%">Got it</button>
+  </div>
+</div>
+
+<script>
+/* =========================================================
+   EDIT HERE
+   ========================================================= */
+const CONFIG = {
+  business: "The Grass Company",
+  // WhatsApp number in international format. Leave demo:true until the owner approves.
+  whatsapp: "27824662860",
+  demo: true
+};
+
+const WA_SVG = '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2z"/></svg>';
+const ICON = {
+  lawn:'<path d="M3 20h18"/><path d="M5 20c0-4 1-7 2-9M9 20c0-5 .5-9 1.5-12M13 20c0-4 1-8 3-11M17 20c0-3 .5-5 2-7"/>',
+  care:'<circle cx="7" cy="17" r="3"/><circle cx="17" cy="17" r="3"/><path d="M10 17h4M4 17V9h9l3 5"/>',
+  revive:'<path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/>',
+  bug:'<rect x="8" y="6" width="8" height="13" rx="4"/><path d="M12 6V4M8 11H4M8 15H4M16 11h4M16 15h4"/>',
+  feed:'<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>',
+  sport:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M12 5v14"/><circle cx="12" cy="12" r="3"/>',
+  earth:'<path d="M3 18l6-8 4 5 3-3 5 6z"/>',
+  tree:'<path d="M12 22v-6"/><path d="M12 16c-4 0-7-2.5-7-6a7 7 0 0 1 14 0c0 3.5-3 6-7 6z"/>'
+};
+const svg = (k,s=22) => '<svg width="'+s+'" height="'+s+'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+ICON[k]+'</svg>';
+const TICK = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
+
+const SERVICES = [
+  {k:"instant", n:"Instant lawn", d:"A brand new lawn, laid in a day", i:"lawn", grass:true},
+  {k:"maint",   n:"Monthly maintenance", d:"Regular care all year", i:"care"},
+  {k:"rejuv",   n:"Rejuvenate my lawn", d:"Bring a tired lawn back", i:"revive", grass:true},
+  {k:"weed",    n:"Weed and insect control", d:"Stop lawn eating pests", i:"bug"},
+  {k:"feed",    n:"Fertilising and compost", d:"Once off feeding", i:"feed"},
+  {k:"sport",   n:"Sports surface", d:"Fields, greens and courts", i:"sport", grass:true},
+  {k:"earth",   n:"Earthworks and drainage", d:"Levelling and agri drains", i:"earth"},
+  {k:"indig",   n:"Indigenous landscaping", d:"Waterwise local planting", i:"tree"}
+];
+const GRASS = [
+  {k:"kikuyu",   n:"Kikuyu",      leaf:"Broad leaf", light:"sun",   t:"Full sun", d:"Tough, fast growing and great for busy family gardens.", c:"#4e9b2f,#6bb83c", g:"7px"},
+  {k:"buffalo",  n:"Buffalo",     leaf:"Broad leaf", light:"sun",   t:"Full sun", d:"Soft, thick and lush underfoot.", c:"#3f8a35,#5aa546", g:"8px"},
+  {k:"paspalum", n:"Paspalum",    leaf:"Fine blade", light:"sun",   t:"Full sun", d:"Fine, neat finish. Handles coastal conditions well.", c:"#5aa83a,#7fc44c", g:"4px"},
+  {k:"cynodon",  n:"Cynodon",     leaf:"Fine blade", light:"sun",   t:"Full sun", d:"Several varieties. The classic manicured look.", c:"#66b03f,#8ccd55", g:"3px"},
+  {k:"berea",    n:"Berea Shade", leaf:"Broad leaf", light:"semi",  t:"Semi shade", d:"Made for gardens with trees and part shade.", c:"#2f7a3a,#46954a", g:"8px"},
+  {k:"kearsney", n:"Kearsney",    leaf:"Broad leaf", light:"shade", t:"Full shade", d:"Our go to for properly shady spots.", c:"#246a35,#3b8545", g:"9px"}
+];
+const LIGHT_ICON = {sun:"☀️", semi:"⛅", shade:"🌳"};
+
+/* service tiles */
+const svcGrid = document.getElementById("svcGrid");
+SERVICES.forEach(s => {
+  const b = document.createElement("button");
+  b.type = "button"; b.className = "tile"; b.dataset.k = s.k;
+  b.innerHTML = '<span class="tick">'+TICK+'</span><span class="ic">'+svg(s.i)+'</span><b>'+s.n+'</b><small>'+s.d+'</small>';
+  b.addEventListener("click", () => { svcGrid.querySelectorAll(".tile").forEach(x => x.classList.toggle("sel", x === b)); setTimeout(() => show(2), 280); });
+  svcGrid.appendChild(b);
+});
+
+/* area */
+let mode = "lw";
+const len = document.getElementById("len"), wid = document.getElementById("wid"), m2 = document.getElementById("m2");
+function area(){ return mode === "lw" ? Math.round((+len.value||0) * (+wid.value||0)) : +m2.value; }
+function drawArea(){
+  const a = area();
+  document.getElementById("areaBig").textContent = a || 0;
+  document.getElementById("m2v").textContent = m2.value;
+  let w = 60, h = 45;
+  if (mode === "lw" && +len.value && +wid.value){ const r = (+len.value)/(+wid.value); w = r >= 1 ? 70 : 70*r; h = r >= 1 ? 70/r : 70; }
+  const s = Math.max(.35, Math.min(1, Math.sqrt(a/400)));
+  const plot = document.getElementById("plot");
+  plot.style.width = (w*s) + "%"; plot.style.height = (h*s*1.2) + "%";
+}
+[len, wid, m2].forEach(i => i.addEventListener("input", drawArea));
+[len, wid].forEach(i => i.addEventListener("keydown", e => { if (e.key === "Enter"){ e.preventDefault(); document.getElementById("next").click(); } }));
+document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => {
+  mode = b.dataset.mode;
+  document.querySelectorAll(".tabs button").forEach(x => x.classList.toggle("on", x === b));
+  document.getElementById("modeLW").hidden = mode !== "lw";
+  document.getElementById("modeM2").hidden = mode !== "m2";
+  drawArea();
+}));
+drawArea();
+
+/* stepper */
+let step = 1;
+const picked = () => [...svcGrid.querySelectorAll(".sel")].map(b => SERVICES.find(s => s.k === b.dataset.k));
+const err = document.getElementById("err");
+
+function show(n){
+  step = n;
+  document.querySelectorAll(".step").forEach(s => s.classList.toggle("on", +s.dataset.step === n));
+  document.querySelectorAll(".progress span").forEach((s,i) => { s.classList.toggle("done", i < n-1); s.classList.toggle("on", i === n-1); });
+  document.getElementById("stepLbl").textContent = "Step " + n + " of 3";
+  document.getElementById("back").hidden = n === 1;
+  document.getElementById("next").innerHTML = n === 3 ? WA_SVG + ' Send' : 'Next &rarr;';
+  document.getElementById("next").style.visibility = n === 1 ? "hidden" : "visible";
+  document.querySelector(".navrow").style.display = n === 1 ? "none" : "flex";
+  document.getElementById("next").className = "btn " + (n === 3 ? "btn-wa" : "btn-lime");
+  err.textContent = "";
+  if (n === 3) summary();
+  if (n === 2){ const p = picked()[0]; document.getElementById("chosen").textContent = p ? p.n : ""; }
+  document.getElementById("builder").scrollIntoView({behavior:"smooth", block:"start"});
+}
+function summary(){
+  const rows = [["Service", picked().map(s => s.n).join(", ")], ["Area", area() + " m²"]];
+  document.getElementById("summary").innerHTML = '<h4>Your message</h4><ul>' + rows.map(r => '<li><b>'+r[0]+'</b><span>'+r[1]+'</span></li>').join("") + '</ul>';
+}
+document.getElementById("back").addEventListener("click", () => show(step - 1));
+document.getElementById("next").addEventListener("click", () => {
+  if (step === 1){
+    if (!picked().length) return err.textContent = "Pick at least one service.";
+    return show(2);
+  }
+  if (step === 2){
+    if (!area()) return err.textContent = "Add a rough size.";
+    return show(3);
+  }
+  const nm = document.getElementById("nm").value.trim(), sb = document.getElementById("sb").value.trim();
+  if (!nm){ document.getElementById("nm").focus(); return err.textContent = "Please add your name."; }
+  if (!sb){ document.getElementById("sb").focus(); return err.textContent = "Please add your suburb."; }
+  const note = document.getElementById("note").value.trim();
+  let msg = "Hi " + CONFIG.business + ", it's " + nm + " from " + sb + ". I'd like some help with my lawn please.\n\n";
+  msg += "Service: " + picked().map(s => s.n).join(", ") + "\n";
+  msg += "Area: about " + area() + " m²";
+  if (mode === "lw") msg += " (" + len.value + " m x " + wid.value + " m)";
+  msg += "\nTiming: " + document.getElementById("when").value;
+  if (note) msg += "\nNotes: " + note;
+  sendWA(msg);
+});
+function demoShow(desc, body){
+  document.getElementById("mdesc").textContent = desc;
+  const pre = document.getElementById("preview");
+  pre.textContent = body || ""; pre.style.display = body ? "block" : "none";
+  document.getElementById("modal").classList.add("show");
+}
+function sendWA(msg){
+  if (CONFIG.demo){
+    document.getElementById("mdesc").textContent = "On the live page, this opens WhatsApp to Donovan (082 466 2860) with this message ready to send:";
+    document.getElementById("preview").style.display = "block";
+    document.getElementById("preview").textContent = msg;
+    document.getElementById("modal").classList.add("show");
+    return;
+  }
+  location.href = "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(msg);
+}
+document.querySelectorAll("[data-wa]").forEach(a => a.addEventListener("click", e => { e.preventDefault(); sendWA("Hi Donovan, I'd like some help with my lawn please."); }));
+document.getElementById("waCard").addEventListener("click", e => { e.preventDefault(); sendWA("Hi " + CONFIG.business + ", I'd like some help with my lawn please."); });
+if (CONFIG.demo){
+  document.querySelectorAll('a[href^="tel:"], a[href^="mailto:"], a[href*="google.com/maps"]').forEach(a => a.addEventListener("click", e => {
+    e.preventDefault();
+    const h = a.getAttribute("href");
+    if (h.startsWith("tel:")) demoShow("On the live page, this button calls " + (h.includes("27824662860") ? "Donovan on 082 466 2860." : "Charmaine on 031 764 0707."));
+    else if (h.startsWith("mailto:")) demoShow("On the live page, this button opens a new email to " + h.slice(7) + ".");
+    else demoShow("On the live page, this button opens Google Maps with directions to 14 Neville Road, Gillitts.");
+  }));
+}
+document.getElementById("close").addEventListener("click", () => document.getElementById("modal").classList.remove("show"));
+
+/* meadow */
+(function(){
+  const m = document.getElementById("meadow"); let out = "";
+  const cols = ["#4d8411","#599900","#6aab12","#91c745","#a8d65e"];
+  for (let i = 0; i < 260; i++){
+    const x = Math.random()*1200, h = 50 + Math.random()*95, w = 4 + Math.random()*6, lean = (Math.random()-.5)*30;
+    const c = cols[Math.floor(Math.random()*cols.length)], d = (Math.random()*3).toFixed(2);
+    out += '<path class="blade" style="animation-delay:-'+d+'s" fill="'+c+'" d="M'+x+' 150 Q'+(x+lean/2)+' '+(150-h/2)+' '+(x+lean)+' '+(150-h)+' Q'+(x+w+lean/3)+' '+(150-h/2)+' '+(x+w)+' 150Z"/>';
+  }
+  m.innerHTML = '<rect y="140" width="1200" height="10" fill="#599900"/>' + out;
+})();
+
+const io = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting){ x.target.classList.add("in"); io.unobserve(x.target); } }), {threshold:.1}) : null;
+document.querySelectorAll(".reveal").forEach(el => io ? io.observe(el) : el.classList.add("in"));
+</script>
+</body>
+</html>
